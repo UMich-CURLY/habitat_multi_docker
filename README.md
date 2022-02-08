@@ -23,8 +23,8 @@ sudo ./launch_docker.sh
   
   Namely we have two repositories in our docker path:
   
-  1. tour_mathing_routing
-  2. habitat_ros_interface
+  1. tour_mathing_routing https://github.com/UMich-CURLY/tourguide_routing_matching
+  2. habitat_ros_interface https://github.com/UMich-CURLY/habitat_ros_interface
 
   Moreover there are 2 conda environments in your docker environment. 
   1. habitat - Based in python3.7 and runs all the files related to habitat_sim and habitat_lab
