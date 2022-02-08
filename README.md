@@ -10,8 +10,8 @@ git clone https://github.com/UMich-CURLY/habitat_multi_docker.git
 cd habitat_multi_docker
 sudo docker build --tag dockerv1 .
 ```
-
-Run the bash file as follows:
+To load the data in your container, make sure you have the Matterport data saved in the cloned repository. You can download the data from habitat_lab repository https://github.com/facebookresearch/habitat-lab. if you save the path outside of thr current repository of the shell script, make sure to change the path to the data on your machine to be loaded correctly in your docker container.
+Finally, Run the bash file as follows:
 
 ```bash
 cd habitat_multi_docker/
@@ -30,8 +30,23 @@ sudo ./launch docker.sh
   1. habitat - Based in python3.7 and runs all the files related to habitat_sim and habitat_lab
   2. robostackenv - Based in python3.9 and runs everything in ros noetic
  
-  Once you're in your docker continure to run the following statements 
+  Once you're in your docker continue to run the following statements 
   
-  4. cd ~/catkin_ws
-  5. catkin_make - to built packages
-  6. source devel/setup.bash
+  ```bash
+    . activate robostackenv
+    cd /home/catkin_ws
+    catkin_make
+    source /home/catkin_ws/devel/setup.bash
+    roslaunch habitat_interface default.launch
+  ```
+  
+  This should have set up your ros interface with habitat. Now lets start our simulator threads.
+  In another terminal inside your docker (docker exec -it <container_id> /bin/bash), run the following:
+  
+  ```bash
+    . activate habitat
+    cd /home/catkin_ws/src/habitat_ros_interface
+    ./launch_robots.bash
+  ```
+
+Finally you should see your three robots in the Rviz window that is open for you. To start the tour planner, "Publish Point" andwhere in the map. This will show the calculated path for the robots, and also execute them. 
