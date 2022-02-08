@@ -16,7 +16,7 @@ Finally, Run the bash file as follows:
 ```bash
 cd habitat_multi_docker/
 sudo chmod +x launch_docker.sh
-sudo ./launch docker.sh
+sudo ./launch_docker.sh
 ```
   
   Inside your docker container, you will find that all the associated code it in the right path.
