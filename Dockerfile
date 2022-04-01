@@ -68,6 +68,8 @@ RUN /bin/bash -c ". activate robostackenv; conda config --env --add channels con
 RUN /bin/bash -c ". activate robostackenv; conda install -y ros-noetic-desktop"
 RUN /bin/bash -c ". activate robostackenv; conda install -y ros-noetic-map-server"
 RUN /bin/bash -c ". activate robostackenv; conda install -y ros-noetic-move-base"
-RUN /bin/bash -c ". activate habitat; pip3 install gurobipy; pip3 install ortools pip install networkx"
+RUN /bin/bash -c ". activate robostackenv; conda install -y ros-noetic-amcl"
+
+RUN /bin/bash -c ". activate habitat; pip3 install gurobipy; pip3 install ortools pip install networkx; conda install -y IPython"
 ENV ROS_MASTER_URI=http://172.17.0.1:11311
 ENV ROS_IP=172.17.0.1
