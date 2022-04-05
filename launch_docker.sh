@@ -21,5 +21,5 @@ docker run -it --rm \
     --env="XAUTHORITY=$XAUTH" \
     --volume="$XAUTH:$XAUTH" \
     --gpus all \
-    dockerv1 \
+    dockerv2 \
     bash
