@@ -54,7 +54,7 @@ ENV MAGNUM_LOG="quiet"
 
 WORKDIR /home
 
-RUN git clone --recursive https://tribhi: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@github.com/UMich-CURLY/tourguide_routing_matching.git matching_routing
+RUN git clone --recursive https://github.com/UMich-CURLY/tourguide_routing_matching.git matching_routing
 
 RUN mkdir catkin_ws && cd catkin_ws && mkdir src && cd src
 WORKDIR /home/catkin_ws/src
