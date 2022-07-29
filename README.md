@@ -1,6 +1,6 @@
 # habitat_multi_docker
 
-This repository sets up the simulation environment for a multi-robot tour guide simulation in Habitat-AI. A video of a sample tours can be seen below:
+This repository sets up the simulation environment for a multi-robot tour guide simulation in Habitat-AI. A video of a sample tour with three tour guides in a Habitat-AI house environment can be seen below:
 
 <img src="tourguide_simulation.gif" alt="tourguide_simulation" width="50%"/>
 
