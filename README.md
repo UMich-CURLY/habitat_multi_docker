@@ -1,4 +1,10 @@
 # habitat_multi_docker
+
+This repository sets up the simulation environment for a multi-robot tour guide simulation in Habitat-AI. A video of a sample tours can be seen below:
+
+
+## Installation
+
 Install docker-ce and then install the NVIDIA Container Toolkit using this link:
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 
